@@ -1,0 +1,19 @@
+.random-box {
+  border: 1px solid #ccc;
+  padding: 10px;
+  margin: 10px 0;
+}
+
+.result {
+  margin-top: 8px;
+}
+
+.lower {
+  color: green;
+  font-weight: bold;
+}
+
+.upper {
+  color: red;
+  font-weight: bold;
+}

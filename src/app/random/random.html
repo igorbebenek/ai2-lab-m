@@ -1,0 +1,17 @@
+<div class="random-box">
+  <button (click)="draw()">
+    Losuj liczbę 1..{{ max }}
+  </button>
+
+  <div *ngIf="value !== null" class="result">
+    <p>Wylosowana liczba: <strong>{{ value }}</strong></p>
+
+    <p *ngIf="isLowerHalf()" class="lower">
+      dolna połowa wartości
+    </p>
+
+    <p *ngIf="isUpperHalf()" class="upper">
+      górna połowa wartości
+    </p>
+  </div>
+</div>
