@@ -1,0 +1,19 @@
+<section class="list-wrapper">
+  <h2 class="list-title">list works!</h2>
+  <p class="list-subtitle">Lista osób z LocalStorage</p>
+
+  <ul class="people-list">
+    <li *ngFor="let p of people; let i = index">
+      <span>
+        {{ i }}. {{ p.firstName }} {{ p.lastName }} ({{ p.age }})
+      </span>
+
+      <span>
+        <a [routerLink]="['/details', i]">Szczegóły</a>
+        <button type="button" class="btn-delete" (click)="delete(i)">
+          Usuń
+        </button>
+      </span>
+    </li>
+  </ul>
+</section>

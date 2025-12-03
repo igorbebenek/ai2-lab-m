@@ -1,0 +1,26 @@
+.details-wrapper {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 2rem;
+  background: #020617;
+  border-radius: 1.5rem;
+  border: 1px solid #1f2937;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.6);
+  color: #e5e7eb;
+}
+
+.details-wrapper h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: #22d3ee;
+}
+
+.details-wrapper h3 {
+  margin-top: 1.5rem;
+  color: #a78bfa;
+}
+
+.details-wrapper p {
+  font-size: 1.1rem;
+  margin-bottom: 0.4rem;
+}
