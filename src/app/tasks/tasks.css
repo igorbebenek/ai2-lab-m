@@ -1,0 +1,31 @@
+.tasks-wrapper {
+  max-width: 800px;
+  margin: 2rem auto;
+}
+
+.tasks-list {
+  list-style: none;
+  padding: 0;
+}
+
+.tasks-list li {
+  display: flex;
+  gap: 1rem;
+  padding: 0.5rem 0;
+  border-bottom: 1px solid #eee;
+}
+
+.task-id {
+  width: 50px;
+  font-weight: bold;
+}
+
+.tasks-list li.completed .task-title {
+  text-decoration: line-through;
+  opacity: 0.6;
+}
+
+
+.archive-button {
+  margin-top: 1rem;
+}

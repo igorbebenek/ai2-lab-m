@@ -1,0 +1,15 @@
+<section class="archive-wrapper">
+  <h2>Archived tasks</h2>
+
+  <ul class="archive-list">
+    <li *ngFor="let t of tasks">
+      <span class="task-id">#{{ t.id }}</span>
+      <span class="task-title">{{ t.title }}</span>
+      <span class="task-deadline">{{ t.deadline }}</span>
+
+      <button type="button" (click)="delete(t)">
+        Delete
+      </button>
+    </li>
+  </ul>
+</section>

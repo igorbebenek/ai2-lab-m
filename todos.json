@@ -1,0 +1,47 @@
+{
+  "todos": [
+    {
+      "title": "First Task",
+      "deadline": "2030-01-01",
+      "completed": true,
+      "archived": true,
+      "id": "e57c"
+    },
+    {
+      "id": "7339",
+      "title": "zrobić porządek",
+      "deadline": "2025-12-11",
+      "completed": true,
+      "archived": true
+    },
+    {
+      "id": "a76d",
+      "title": "zrobić obiad",
+      "deadline": "",
+      "completed": true,
+      "archived": true
+    },
+    {
+      "id": "7195",
+      "title": "zadanie3",
+      "deadline": "2025-12-23",
+      "completed": true,
+      "archived": true
+    },
+    {
+      "id": "7446",
+      "title": "zadanie4",
+      "deadline": "2025-12-31",
+      "completed": true,
+      "archived": true
+    },
+    {
+      "id": "ac70",
+      "title": "First Task",
+      "deadline": "2030-01-01",
+      "completed": false,
+      "archived": false
+    }
+  ]
+}
+

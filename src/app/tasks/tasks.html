@@ -1,0 +1,50 @@
+<section class="tasks-wrapper">
+  <h2>Current tasks</h2>
+
+  <form class="task-form" (ngSubmit)="addTask()">
+    <label>
+      Task title
+      <input
+        type="text"
+        name="title"
+        [(ngModel)]="newTask.title"
+        required
+      />
+    </label>
+
+    <label>
+      Due date
+      <input
+        type="date"
+        name="deadline"
+        [(ngModel)]="newTask.deadline"
+      />
+    </label>
+
+    <button type="submit">Add Task</button>
+  </form>
+
+  <ul class="tasks-list">
+    <li *ngFor="let t of tasks" [class.completed]="t.completed">
+      <input
+        type="checkbox"
+        [name]="'completed-' + t.id"
+        [(ngModel)]="t.completed"
+        (change)="handleChange(t)"
+      />
+
+      <span class="task-id">#{{ t.id }}</span>
+      <span class="task-title">{{ t.title }}</span>
+      <span class="task-deadline">{{ t.deadline }}</span>
+      <span class="task-flags">
+      completed: {{ t.completed }} |
+      archived: {{ t.archived }}
+    </span>
+    </li>
+  </ul>
+  <button type="button" class="archive-button" (click)="archiveCompleted()">
+    Archive completed
+  </button>
+
+
+</section>
