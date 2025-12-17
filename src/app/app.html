@@ -1,12 +1,29 @@
-<header>
+<mat-toolbar>
   <h1>Todo List</h1>
-  <nav>
-    <a routerLink="/tasks" routerLinkActive="active">Tasks</a>
-    |
-    <a routerLink="/archive" routerLinkActive="active">Archive</a>
-  </nav>
-</header>
 
-<main>
-  <router-outlet></router-outlet>
-</main>
+  <div class="spacer"></div>
+
+  <mat-chip-listbox>
+    <a
+      mat-chip-option
+      routerLink="/tasks"
+      routerLinkActive="active"
+      #rta="routerLinkActive"
+      [selected]="rta.isActive"
+    >
+      Tasks
+    </a>
+
+    <a
+      mat-chip-option
+      routerLink="/archive"
+      routerLinkActive="active"
+      #rtaa="routerLinkActive"
+      [selected]="rtaa.isActive"
+    >
+      Archive
+    </a>
+  </mat-chip-listbox>
+</mat-toolbar>
+
+<router-outlet></router-outlet>

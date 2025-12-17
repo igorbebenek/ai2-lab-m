@@ -2,49 +2,58 @@
   <h2>Current tasks</h2>
 
   <form class="task-form" (ngSubmit)="addTask()">
-    <label>
-      Task title
+    <mat-form-field>
+      <mat-label>Task title</mat-label>
       <input
+        matInput
         type="text"
         name="title"
         [(ngModel)]="newTask.title"
         required
       />
-    </label>
+      <mat-hint>Enter at least one character</mat-hint>
+    </mat-form-field>
 
-    <label>
-      Due date
+    <mat-form-field>
+      <mat-label>Due date</mat-label>
+
       <input
-        type="date"
+        matInput
+        [matDatepicker]="picker"
         name="deadline"
         [(ngModel)]="newTask.deadline"
       />
-    </label>
+      <mat-hint>Date is optional</mat-hint>
+      <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
+      <mat-datepicker #picker></mat-datepicker>
+    </mat-form-field>
 
-    <button type="submit">Add Task</button>
+    <button mat-raised-button type="submit" [disabled]="!canAddTask()">
+      Add Task
+    </button>
   </form>
-
   <ul class="tasks-list">
     <li *ngFor="let t of tasks" [class.completed]="t.completed">
-      <input
-        type="checkbox"
-        [name]="'completed-' + t.id"
-        [(ngModel)]="t.completed"
-        (change)="handleChange(t)"
-      />
+      <mat-card>
+        <mat-card-content>
+          <mat-checkbox
+            [name]="'completed-' + t.id"
+            [(ngModel)]="t.completed"
+            (change)="handleChange(t)">
+          </mat-checkbox>
 
-      <span class="task-id">#{{ t.id }}</span>
-      <span class="task-title">{{ t.title }}</span>
-      <span class="task-deadline">{{ t.deadline }}</span>
-      <span class="task-flags">
-      completed: {{ t.completed }} |
-      archived: {{ t.archived }}
-    </span>
+          <span class="task-id">#{{ t.id }}</span>
+          <span class="task-title">{{ t.title }}</span>
+          <span class="task-deadline">{{ t.deadline }}</span>
+          <span class="task-flags">
+          completed: {{ t.completed }} | archived: {{ t.archived }}
+        </span>
+        </mat-card-content>
+      </mat-card>
     </li>
   </ul>
-  <button type="button" class="archive-button" (click)="archiveCompleted()">
+
+  <button mat-stroked-button type="button" (click)="archiveCompleted()" [disabled]="!canArchiveCompleted()">
     Archive completed
   </button>
-
-
 </section>

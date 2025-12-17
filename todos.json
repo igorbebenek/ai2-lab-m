@@ -41,7 +41,13 @@
       "deadline": "2030-01-01",
       "completed": false,
       "archived": false
+    },
+    {
+      "id": "214c",
+      "title": "zadanie",
+      "deadline": "",
+      "completed": true,
+      "archived": false
     }
   ]
 }
-

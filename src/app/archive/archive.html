@@ -3,13 +3,16 @@
 
   <ul class="archive-list">
     <li *ngFor="let t of tasks">
-      <span class="task-id">#{{ t.id }}</span>
-      <span class="task-title">{{ t.title }}</span>
-      <span class="task-deadline">{{ t.deadline }}</span>
+      <mat-card>
+        <mat-card-content>
+          <span class="task-id">#{{ t.id }}</span>
+          <span class="task-title">{{ t.title }}</span>
+          <span class="task-deadline">{{ t.deadline }}</span>
 
-      <button type="button" (click)="delete(t)">
-        Delete
-      </button>
+          <button mat-button type="button" (click)="delete(t)">Delete</button>
+        </mat-card-content>
+      </mat-card>
     </li>
   </ul>
+
 </section>

@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { MatButtonModule } from '@angular/material/button';
+import { MatCardModule } from '@angular/material/card';
 
 import { Task } from '../task';
 import { Tasks as TasksService } from '../tasks';
@@ -7,7 +9,7 @@ import { Tasks as TasksService } from '../tasks';
 @Component({
   selector: 'app-archive',
   standalone: true,
-  imports: [CommonModule],
+  imports: [MatCardModule,CommonModule,MatButtonModule],
   templateUrl: './archive.html',
   styleUrl: './archive.css',
 })
